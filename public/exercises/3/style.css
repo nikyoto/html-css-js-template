@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 60rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+@media (min-width: 30rem) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 1px 1px 12px rgba(5,5,5,0.5);
+    color: black;
+}
+
+.card-header {
+    border-bottom: 1px solid;
+}
+
+.card-media {
+    margin: 0;
+}
+
+.card-media img {
+    display: block;
+    width: 40%;
+    margin: 1rem auto;
+}

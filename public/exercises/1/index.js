@@ -23,9 +23,19 @@ console.log(`
 `);
 
 // 1.
+const element = document.querySelector("#root");
+const h1 = document.createElement("h1");
+element.append(h1);
+h1.innerText = "It works!";
+//element.innerHTML("<h1> It works! </h1>");
 
 // 2.
-
+h1.className = "main-headline";
 // 3.
+const head = document.querySelector("head");
+const style = document.createElement("style");
 
+style.setAttribute('id', "main-style");
+document.head.append(style);
 // 4.
+style.innerHTML = ".main-headline { color: blue; }";

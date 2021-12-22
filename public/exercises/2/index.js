@@ -27,3 +27,22 @@ console.log(`
 - Choose a font from https://fonts.google.com/
 - Use the font for your card
 `);
+
+// 1.
+
+document.createElement("div");
+const div = document.querySelector("#root");
+div.setAttribute('id', "root");
+
+const header = document.createElement("header");
+div.append(header);
+
+const h3 = document.createElement("h3");
+h3.innerText = "Rando";
+header.append(h3);
+
+const image = document.createElement("img");
+div.append(image);
+const randomNumber = Math.round(Math.random()*91);
+image.setAttribute('src', `https://randomuser.me/api/portraits/women/${randomNumber}.jpg`)
+image.setAttribute('alt', "This is a test image.");
